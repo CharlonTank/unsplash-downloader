@@ -1,6 +1,6 @@
 {
   "name": "unsplash-dl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A command-line tool to easily download images from Unsplash",
   "main": "src/cli.js",
   "bin": {
@@ -30,12 +30,12 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/charlontank/unsplash-downloader"
+    "url": "git+https://github.com/CharlonTank/unsplash-downloader.git"
   },
   "bugs": {
-    "url": "https://github.com/charlontank/unsplash-downloader/issues"
+    "url": "https://github.com/CharlonTank/unsplash-downloader/issues"
   },
-  "homepage": "https://github.com/charlontank/unsplash-downloader#readme",
+  "homepage": "https://github.com/CharlonTank/unsplash-downloader#readme",
   "engines": {
     "node": ">=14.0.0"
   }
