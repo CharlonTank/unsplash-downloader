@@ -25,7 +25,7 @@ Commands:
 Download Options:
   -n, --count <number>       Number of images to download (default: 5)
   -s, --size <size>         Image size: small, regular, or full (default: regular)
-  -o, --output <path>       Output directory (default: ./unsplash-images)
+  --output-dir <path>       Output directory for downloaded images (default: ./unsplash-images)
 
 Examples:
   # First time setup
@@ -35,7 +35,7 @@ Examples:
   $ unsplash-dl download "mountains" -n 3 -s full
 
   # Download 10 cat pictures to a specific directory
-  $ unsplash-dl download "cats" -n 10 -o ./cat-photos
+  $ unsplash-dl download "cats" -n 10 --output-dir ./cat-photos
 
   # Download 5 regular-size nature photos (default)
   $ unsplash-dl download "nature"
@@ -71,14 +71,14 @@ program
     .description('Download images from Unsplash')
     .option('-n, --count <number>', 'number of images to download', '5')
     .option('-s, --size <size>', 'image size (small, regular, full)', 'regular')
-    .option('-o, --output <path>', 'output directory', './unsplash-images')
+    .option('--output-dir <path>', 'output directory for downloaded images', './unsplash-images')
     .addHelpText('after', `
 Examples:
   # Download 3 full-size mountain photos
   $ unsplash-dl download "mountains" -n 3 -s full
 
   # Download 10 cat pictures to a specific directory
-  $ unsplash-dl download "cats" -n 10 -o ./cat-photos
+  $ unsplash-dl download "cats" -n 10 --output-dir ./cat-photos
 
   # Download 5 regular-size nature photos (default)
   $ unsplash-dl download "nature"`)
@@ -94,7 +94,7 @@ Examples:
                 query,
                 count: parseInt(options.count),
                 size: options.size,
-                outputDir: options.output
+                outputDir: options.outputDir
             });
         } catch (error) {
             console.error('Error:', error.message);

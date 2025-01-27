@@ -41,14 +41,14 @@ unsplash-dl download "mountain landscape"
 
 With options:
 ```bash
-unsplash-dl download "cats" --count 10 --size full --output ./cat-photos
+unsplash-dl download "cats" --count 10 --size full --output-dir ./cat-photos
 ```
 
 ### Options
 
 - `-n, --count <number>` - Number of images to download (default: 5)
 - `-s, --size <size>` - Image size: small, regular, or full (default: regular)
-- `-o, --output <path>` - Output directory (default: ./unsplash-images)
+- `--output-dir <path>` - Directory where images will be saved (default: ./unsplash-images)
 
 ### Examples
 
@@ -57,7 +57,7 @@ unsplash-dl download "cats" --count 10 --size full --output ./cat-photos
 unsplash-dl download "mountains" -n 3 -s full
 
 # Download 10 cat pictures to a specific directory
-unsplash-dl download "cats" -n 10 -o ./cat-photos
+unsplash-dl download "cats" -n 10 --output-dir ./cat-photos
 
 # Download 5 regular-size nature photos (default)
 unsplash-dl download "nature"
